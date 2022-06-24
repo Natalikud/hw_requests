@@ -31,7 +31,7 @@ class Yadisk:
 
 
 if __name__ == '__main__':
-    my_token = 'AQAAAABeVj3BAADLW2ETxduOYUAxlX3ukwhnvnA'
+    my_token = ''
     base_path = os.getcwd()
     my_file = 'file.txt'
     path_to_file = os.path.join(base_path, my_file)
