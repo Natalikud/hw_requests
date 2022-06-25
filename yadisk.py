@@ -8,18 +8,16 @@ class Yadisk:
         self.token = token
         # self.host = 'https://cloud-api.yandex.net:443'
         self.headers = {'Content-Type': 'application/json',
-                        'Authorization': f'OAuth{self.token}'
+                        'Authorization': f'OAuth {self.token}'
                         }
 
     def _get_upload_link(self, path):
         url = f'{self.host}/v1/disk/resources/upload/'
-        pprint(url)
         headers = self.headers
         params = {'path': path, 'overwrite': True}
         response = requests.get(url, params=params, headers=headers)
-        pprint(f'{url},{params},{headers}')
         return response.json().get('href')
-        pprint(response.json())
+
 
     def upload_file(self, path, file_name):
         upload_link = self._get_upload_link(path)
