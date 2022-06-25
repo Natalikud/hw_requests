@@ -3,7 +3,7 @@ import requests
 import os
 
 from yadisk import Yadisk
-my_token = 'AQAAAABeVj3BAADLW2ETxduOYUAxlX3ukwhnvnA'
+my_token = ''
 
 if __name__ == '__main__':
     yadisk = Yadisk(my_token)
